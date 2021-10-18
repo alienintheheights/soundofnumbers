@@ -4,7 +4,7 @@ import * as Tone from 'tone'
 
 function Play(props) {
 
-    const { noteVals, tempo, loop, play, showNote } = props
+    const { noteVals, tempo, loop, play, reset } = props
 
     const decay = 0.1
     const volume = 1
@@ -19,12 +19,12 @@ function Play(props) {
     }).toDestination()
 
     useEffect(() => {
-        if (play) {
+        if (play || reset) {
             restartSequence()
         } else {
             stopSequence()
         }
-    }, [play, noteVals, tempo, loop])
+    }, [play, noteVals, tempo, loop, reset])
    
     const stopSequence = () => {
         Tone.Transport.stop()
@@ -35,6 +35,7 @@ function Play(props) {
         stopSequence()
         Tone.Transport.bpm.value = tempo
         const seq = new Tone.Sequence((time, note) => {
+            if (note === '') return // "." mapping
             synth.triggerAttackRelease(note, decay, time)
             Tone.Draw.schedule(() => {
                 const currentNote = note.substring(0, note.length - 1).replace('#', 'S')

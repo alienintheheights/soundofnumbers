@@ -38,6 +38,7 @@ function PlayForm() {
     const [loop, setLoop] = useState(false)
     const [key, setKey] = useState(0)
     const [octave, setOctave] = useState(4)
+    const [reset, setReset] = useState(false)
 
     useEffect(() => {
         prepareNotes()
@@ -52,17 +53,19 @@ function PlayForm() {
     }
 
     const prepareNotes = () => {
-        const splitNotes = [...notes]
+        const prundedVal = notes.replace('.', '')
+        const splitNotes = [...prundedVal]
         const relativeNotes = generateNotes(key, c.SCALE_MAP[scale], octave)
         const noteArray = splitNotes.filter(num => isValidNumber(num)).map(num => findNote(num, relativeNotes))
         setNoteVals(noteArray)
     }
 
     const isValidNumber = (num) => {
+        const prundedVal = num.replace('.', '')
         if (base === 10) 
-            return !isNaN(num)
+            return !isNaN(prundedVal)
 
-        return (typeof (num) === 'string' && !num.match(base12pattern)) 
+        return (typeof (prundedVal) === 'string' && !prundedVal.match(base12pattern)) 
     }
 
     const findNote = (num, relativeNotes) => {
@@ -133,17 +136,23 @@ function PlayForm() {
                 rowSpacing={2} 
                 columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                 <Grid item xs={12}>
-                    <Play play={play} noteVals={noteVals} tempo={tempo} loop={loop} showNote={false}/>
+                    <Play play={play} noteVals={noteVals} tempo={tempo} loop={loop} reset={reset}/>
                 </Grid>
                 <Grid item xs={12}>
                     <ButtonGroup variant="outlined" aria-label="outlined button group">
                         <Button 
                             id="play-button" 
-                            onClick={() => setPlay(true)}
+                            onClick={() => {
+                                setReset(!reset)
+                                setPlay(true)
+                            }}
                             label='Play It'>Play</Button>
                         <Button 
                             id="stop-button" 
-                            onClick={() => setPlay(false)}
+                            onClick={() => {
+                                setReset(false)
+                                setPlay(false)
+                            }}
                             label='Stop It'>Stop</Button>
                     </ButtonGroup>
                 </Grid>
