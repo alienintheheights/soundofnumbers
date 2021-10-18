@@ -1,5 +1,5 @@
 # The Sound of Numbers
-A simple number-to-note web application. The idea is to take a string of digits and map them to various musical modes in selected keys and then play back the stream at the tempo of your choosing. Includes a handful of well-known mathematical constants for fun, including Pi, e, gamma, root 2 and 5 and base-12 Pi. The latter allows an onto mapping of the chromatic scale.
+A simple number-to-note web application. The idea is to take a string of digits and map them to various musical modes in selected keys and then play back the stream at the tempo of your choosing. Includes a handful of well-known mathematical constants for fun, including Pi, e, and the golden ratio in both base 10 and base 12. The latter allows an onto mapping of the chromatic scale.
 
 The application uses ToneJS which is a wrapper around the browser audio player.
 
