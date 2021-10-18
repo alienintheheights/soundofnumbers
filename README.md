@@ -7,7 +7,7 @@ Demo [https://www.andrewlienhard.io/soundofnumbers/](https://www.andrewlienhard.
 
 One such sequence [https://www.youtube.com/watch?v=rN3uKiyFMRk](https://www.youtube.com/watch?v=rN3uKiyFMRk)
 
-Created by [Andrew Lienhard](http://andrewlienhard.io), 2021
+The basis for this app is described in more detail here: [https://www.andrewlienhard.io/irrational-composition/](https://www.andrewlienhard.io/irrational-composition/)
 
 
 ## build

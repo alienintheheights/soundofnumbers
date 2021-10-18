@@ -44,14 +44,15 @@ function PlayForm() {
     }, [scale, constantName, key, octave, notes])
 
     const selectNoteValues = (event) => {
-        if (event && event.target && isValidNumber(event.target.value)) {
-            setNotes(event.target.value)
+        const value = event.target.value
+        if (isValidNumber(value)) {
+            setNotes(value)
             setConstantName('custom')
         }
     }
 
     const prepareNotes = () => {
-        const splitNotes = [...notes]//.map(note => (note !== '0') ? parseInt(note, base) - 1 : 9)
+        const splitNotes = [...notes]
         const relativeNotes = generateNotes(key, c.SCALE_MAP[scale], octave)
         const noteArray = splitNotes.filter(num => isValidNumber(num)).map(num => findNote(num, relativeNotes))
         setNoteVals(noteArray)
@@ -61,10 +62,7 @@ function PlayForm() {
         if (base === 10) 
             return !isNaN(num)
 
-        if (typeof (num) === 'string' && num.match(base12pattern)) {
-            return false
-        }
-        return !isNaN(parseInt(num, base))
+        return (typeof (num) === 'string' && !num.match(base12pattern)) 
     }
 
     const findNote = (num, relativeNotes) => {

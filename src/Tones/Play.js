@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 
 import * as Tone from 'tone'
 
@@ -14,7 +14,6 @@ function Play(props) {
         oscillator : {
             volume   : volume,
             type     : waveform,
-            //spread   : 20,
             partials : [0, 2, 3, 4]
         }
     }).toDestination()
@@ -40,8 +39,6 @@ function Play(props) {
             synth.triggerAttackRelease(note, decay, time)
             Tone.Draw.schedule(() => {
                 const currentNote = note.substring(0, note.length - 1).replace('#', 'S')
-
-                //setDisplayName(note.substring(0, note.length - 1))
                 const noteElement = document.querySelector('#'+currentNote)
                 noteElement.classList.add('active')
                 setTimeout(() => {
