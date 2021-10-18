@@ -5,6 +5,8 @@ The application uses ToneJS which is a wrapper around the browser audio player.
 
 Demo [https://www.andrewlienhard.io/soundofnumbers/](https://www.andrewlienhard.io/soundofnumbers/)
 
+One such sequence [https://www.youtube.com/watch?v=rN3uKiyFMRk](https://www.youtube.com/watch?v=rN3uKiyFMRk)
+
 Created by [Andrew Lienhard](http://andrewlienhard.io), 2021
 
 

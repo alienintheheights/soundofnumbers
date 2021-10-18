@@ -3,6 +3,11 @@
   margin-top: 25px;
 }
 
+.footer{
+  padding: 15px 0;
+  font-size: 0.9em;
+}
+
 .tone-form {
   width: 60%;
   margin: auto;

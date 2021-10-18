@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 
-
 import Grid from '@mui/material/Grid'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
@@ -16,7 +15,6 @@ import Slider from '@mui/material/Slider'
 import Play from './Play'
 import { generateNotes } from './generator'
 import * as c from '../constants'
-import {experimentalStyled} from '@mui/material'
 
 // octave marks
 const marks = c.NOTE_SCALE.map((note, index) => {
