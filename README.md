@@ -3,6 +3,8 @@ A simple number-to-note web application. The idea is to take a string of digits 
 
 The application uses ToneJS which is a wrapper around the browser audio player.
 
+Demo [https://www.andrewlienhard.io/soundofnumbers/](https://www.andrewlienhard.io/soundofnumbers/)
+
 Created by [Andrew Lienhard](http://andrewlienhard.io), 2021
 
 
