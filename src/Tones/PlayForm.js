@@ -24,20 +24,20 @@ const marks = c.NOTE_SCALE.map((note, index) => {
     }
 })
 
-const base12pattern = /[^0-9AB]/g
+const base12pattern = /[^0-9AB]/gi
 
 function PlayForm() {
 
     const [play, setPlay] = useState(false)
-    const [notes, setNotes] = useState('1234567890')
+    const [notes, setNotes] = useState(c.PI12)
     const [noteVals, setNoteVals] = useState([])
-    const [constantName, setConstantName] = useState('')
-    const [scale, setScale] = useState('ionian')
+    const [base, setBase] = useState(12)
+    const [constantName, setConstantName] = useState(c.PI12_NAME)
+    const [scale, setScale] = useState('chromatic')
     const [tempo, setTempo] = useState(120)
     const [loop, setLoop] = useState(false)
     const [key, setKey] = useState(0)
     const [octave, setOctave] = useState(4)
-    const [base, setBase] = useState(10)
 
     useEffect(() => {
         prepareNotes()
@@ -72,9 +72,11 @@ function PlayForm() {
                 index = 9
                 break
             case 'A':
+            case 'a':
                 index = 10
                 break
             case 'B':
+            case 'b':
                 index = 11
                 break
             default:
@@ -118,7 +120,7 @@ function PlayForm() {
     const selectNumConstant = (event) => {
         const val = event.target.value
         setConstantName(val)
-        setBase((val === c.PI12_NAME)? 12 : 10) 
+        setBase((val.indexOf('12') > 0)? 12 : 10) 
         setNotes(c.MATH_MAP[val].value || '')
     }
 
@@ -205,15 +207,26 @@ function PlayForm() {
                 </Grid>
                 <Grid item xs={12}>
                     <FormControl component="fieldset">
-                        <FormLabel component="legend">Mathematical Constants</FormLabel>
+                        <FormLabel component="legend">Base 10 Mathematical Constants</FormLabel>
                         <RadioGroup row aria-label="numConstant" name="row-radio-buttons-group">
                             <FormControlLabel control={ <Radio  />} value="pi" onClick={selectNumConstant} checked={constantName===c.PI_NAME} name="numConstant" label={c.MATH_MAP[c.PI_NAME].label} />
-                            <FormControlLabel control={ <Radio  />} value="pi12" onClick={selectNumConstant} checked={constantName===c.PI12_NAME} name="numConstant" label={c.MATH_MAP[c.PI12_NAME].label} />
                             <FormControlLabel control={ <Radio  />} value="e" onClick={selectNumConstant}  checked={constantName===c.E_NAME} name="numConstant" label={c.MATH_MAP[c.E_NAME].label} />
                             <FormControlLabel control={ <Radio  />} value="gamma" onClick={selectNumConstant} checked={constantName===c.GAMMA_NAME} name="numConstant" label={c.MATH_MAP[c.GAMMA_NAME].label} />
-                            <FormControlLabel control={ <Radio  />} value="phi" onClick={selectNumConstant} checked={constantName==='phi'} name="numConstant" label={c.MATH_MAP['phi'].label} />
+                            <FormControlLabel control={ <Radio  />} value="phi" onClick={selectNumConstant} checked={constantName===c.PHI_NAME} name="numConstant" label={c.MATH_MAP[c.PHI_NAME].label} />
                             <FormControlLabel control={ <Radio  />} value="root2" onClick={selectNumConstant} checked={constantName===c.ROOT2_NAME} name="numConstant" label={c.MATH_MAP[c.ROOT2_NAME].label} />
                             <FormControlLabel control={ <Radio  />} value="root5" onClick={selectNumConstant} checked={constantName===c.ROOT5_NAME} name="numConstant" label={c.MATH_MAP[c.ROOT5_NAME].label} />
+                           
+                           
+                        </RadioGroup>
+                        <FormLabel component="legend">Base 12 Mathematical Constants</FormLabel>
+                        <RadioGroup row aria-label="numConstant" name="row-radio-buttons-group">
+                            <FormControlLabel control={ <Radio  />} value="pi12" onClick={selectNumConstant} checked={constantName===c.PI12_NAME} name="numConstant" label={c.MATH_MAP[c.PI12_NAME].label} />
+                            <FormControlLabel control={ <Radio  />} value="e12" onClick={selectNumConstant}  checked={constantName===c.E12_NAME} name="numConstant" label={c.MATH_MAP[c.E12_NAME].label} />
+                            <FormControlLabel control={ <Radio  />} value="gamma12" onClick={selectNumConstant} checked={constantName===c.GAMMA12_NAME} name="numConstant" label={c.MATH_MAP[c.GAMMA12_NAME].label} />
+                            <FormControlLabel control={ <Radio  />} value="phi12" onClick={selectNumConstant} checked={constantName===c.PHI12_NAME} name="numConstant" label={c.MATH_MAP[c.PHI12_NAME].label} />
+                            <FormControlLabel control={ <Radio  />} value="root2_12" onClick={selectNumConstant} checked={constantName===c.ROOT2_12_NAME} name="numConstant" label={c.MATH_MAP[c.ROOT2_12_NAME].label} />
+                            <FormControlLabel control={ <Radio  />} value="root5_12" onClick={selectNumConstant} checked={constantName===c.ROOT5_12_NAME} name="numConstant" label={c.MATH_MAP[c.ROOT5_12_NAME].label} />
+                    
                         </RadioGroup>
                         <div className='about-constant'>
                             {constantName && c.MATH_MAP[constantName] && (<a href={c.MATH_MAP[constantName].link}>{c.MATH_MAP[constantName].description}</a>)}
