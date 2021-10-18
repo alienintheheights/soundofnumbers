@@ -37,7 +37,7 @@ function PlayForm() {
     const [loop, setLoop] = useState(false)
     const [key, setKey] = useState(0)
     const [octave, setOctave] = useState(4)
-    const [base, setBase] = useState(12)
+    const [base, setBase] = useState(10)
 
     useEffect(() => {
         prepareNotes()
@@ -67,14 +67,18 @@ function PlayForm() {
 
     const findNote = (num, relativeNotes) => {
         let index // could do this with the ASCII values instead
-        if (num === '0') {
-            index = 9
-        } else if (num === 'A') {
-            index = 10
-        } else if (num === 'B') {
-            index = 11
-        } else {
-            index = num - 1
+        switch (num) {
+            case '0':
+                index = 9
+                break
+            case 'A':
+                index = 10
+                break
+            case 'B':
+                index = 11
+                break
+            default:
+                index = num -1
         }
         return relativeNotes[index]
     }
@@ -112,30 +116,10 @@ function PlayForm() {
     }
 
     const selectNumConstant = (event) => {
-        setConstantName(event.target.value)
-        if (event.target.value === c.PI_NAME) {
-            setBase(10)
-            setNotes(c.PI)
-        } else if (event.target.value === c.PI12_NAME) {
-            setBase(12)
-            setNotes(c.PI12)
-        } else if (event.target.value === c.E_NAME) {
-            setBase(10)
-            setNotes(c.E)
-        } else if (event.target.value === c.ROOT2_NAME) {
-            setBase(10)
-            setNotes(c.ROOT2)
-            setNotes(c.E)
-        } else if (event.target.value === c.ROOT5_NAME) {
-            setBase(10)
-            setNotes(c.ROOT5)
-        } else if (event.target.value === c.GAMMA_NAME) {
-            setBase(10)
-            setNotes(c.GAMMA)
-        } else {
-            setBase(10)
-            setNotes(c.PHI)
-        }
+        const val = event.target.value
+        setConstantName(val)
+        setBase((val === c.PI12_NAME)? 12 : 10) 
+        setNotes(c.MATH_MAP[val].value || '')
     }
 
     return (

@@ -33,7 +33,6 @@ function Play(props) {
 
     const restartSequence = () => {
         stopSequence()
-        console.log(noteVals)
         Tone.Transport.bpm.value = tempo
         const seq = new Tone.Sequence((time, note) => {
             synth.triggerAttackRelease(note, decay, time)
@@ -50,7 +49,6 @@ function Play(props) {
         Tone.Transport.start()
     }
 
-    console.log('play render')
     return (
         <div>
             <div id="note-wrapper">
