@@ -9,6 +9,16 @@ One such sequence [https://www.youtube.com/watch?v=rN3uKiyFMRk](https://www.yout
 
 The basis for this app is described in more detail here: [https://www.andrewlienhard.io/irrational-composition/](https://www.andrewlienhard.io/irrational-composition/)
 
+## Musical Modes Supported
+Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian, Locrian
+
+Harmonic Minor, Hungarian Minor
+
+Chromatic
+
+## Mathematical Constants
+
+Pi, e, The Euler-Mascheroni constant (a.k.a., gamma), The Golden Ratio (a.k.a., phi) and the square roots of two and five. All are available in base 10 and base 12.
 
 ## build
 `yarn install`
