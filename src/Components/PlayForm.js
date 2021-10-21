@@ -15,9 +15,9 @@ const base12pattern = /[^0-9AB]/gi
 function PlayForm() {
 
     const [play, setPlay] = useState(false)
-    const [notes, setNotes] = useState(c.PI12)
+    const [notes, setNotes] = useState(c.PI)
     const [noteVals, setNoteVals] = useState([])
-    const [base, setBase] = useState(12)
+    const [base, setBase] = useState(10)
     const [constantName, setConstantName] = useState(c.PI_NAME)
     const [scale, setScale] = useState(m.LYD_NAME)
     const [tempo, setTempo] = useState(130)

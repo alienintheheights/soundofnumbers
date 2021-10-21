@@ -13,6 +13,11 @@ function StartStop(props)  {
     const playText = play ? 'Playing' : 'Hear'
     return (
         <React.Fragment>
+            <Row id='playback'>
+                <Col className='section-label' sm={12}>
+                player
+                </Col>
+            </Row>
             <Row>
                 <Col id='settings-summary' className='form-col-right-extra' sm={12}>
                     <span id=''>{playText} {summary}</span>
@@ -42,7 +47,8 @@ function StartStop(props)  {
                         color={loop ? 'primary' : 'disabled'} />
                   
                 </Col>
-            </Row>
+            </Row> 
+          
         </React.Fragment>)
 }
 

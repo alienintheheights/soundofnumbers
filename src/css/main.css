@@ -27,6 +27,11 @@
   border-bottom: solid #eee;
   border-bottom-width: thin;
 }
+#about-app{
+  width: 75%;
+  margin: auto;
+  padding-top: 10px;
+}
 #play-app{
   color: rgba(0, 0, 0, 0.87);
   width: 85%;
@@ -97,6 +102,7 @@
   color: black;
   border-bottom: solid #eee;
   border-bottom-width: thin;
+  margin-top: 9px;
   margin-bottom: 5px;
 }
 #player-row{

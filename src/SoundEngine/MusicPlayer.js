@@ -63,14 +63,14 @@ function Play(props) {
         const seq = new Tone.Sequence((time, note) => {
             index++
             if (note === '') return // "." mapping
-            synth.triggerAttackRelease(note, decay, time)
+            synth.triggerAttackRelease(note, decay, time + 0.10)
             Tone.Draw.schedule(() => {
                 const currentNote = note.substring(0, note.length - 1).replace('#', 'S')
                 const noteElement = document.querySelector('#'+currentNote)
                 noteElement.classList.add('active')
-                var color = Math.floor(Math.random()*16777215).toString(16) // = "#A197B9"
-
-                noteElement.style.backgroundColor=color //colorList[index%12]
+               
+                //var color = Math.floor(Math.random()*16777215).toString(16) // = "#A197B9"
+                // noteElement.style.backgroundColor=color //colorList[index%12]
                 setTimeout(() => {
                     noteElement.classList.remove('active')
                 }, 50)
@@ -78,7 +78,7 @@ function Play(props) {
             if (!loop && index === noteVals.length) {
                 endPlay()
             }
-        }, noteVals).start(0)
+        }, noteVals).start('+0.2')
         seq.loop = loop
         Tone.Transport.start()
     }

@@ -68,7 +68,7 @@ export const SCALE_MAP = {
         'name'        : 'Aeolian',
         'label'       : AEO_NAME,
         'value'       : TWELVE_NOTE_AEOLIAN_SCALE,
-        'description' : 'The Mixolydian scale is W H W W H W W',
+        'description' : 'The Aeolian scale is W H W W H W W',
         'link'        : 'http://musictheoryfundamentals.com/MusicTheory/modes.php'
     },
     [LOC_NAME] : {

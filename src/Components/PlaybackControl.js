@@ -42,11 +42,6 @@ function PlaybackControl(props) {
 
     return (
         <React.Fragment>
-            <Row id='playback'>
-                <Col className='section-label' sm={12}>
-                player
-                </Col>
-            </Row>
             <Row>
                 <Col  className='form-col-left' xl={2} sm={2}>
                    visualizer
