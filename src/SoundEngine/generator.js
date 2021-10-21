@@ -1,4 +1,4 @@
-import { NOTE_SCALE, CHROMATIC_SCALE } from '../constants'
+import { NOTE_SCALE, CHROMATIC_SCALE } from './musicConstants'
 
 const ZERO_TO_ELEVEN = [...Array(12).keys()]
   

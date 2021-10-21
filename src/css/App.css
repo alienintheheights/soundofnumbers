@@ -1,0 +1,227 @@
+.App {
+    min-height: 100%;  
+    position: relative;
+    background-color: white;
+    color: #333;
+}
+.home {
+  @media (min-width: 1185px) {
+      padding-right: 88px;
+      padding-left: 88px;
+  }
+  @media (min-width: 1441px) {
+     margin: auto;
+  }
+  padding-right: 25px;
+  padding-left: 25px;
+  padding-top: 1.5em;
+  &.container-fluid {           
+      @media (min-width: 1440px) {
+          max-width: 1440px;
+      }            
+  }
+}
+#topnav{
+  width: 85%;
+  margin: auto;
+  border-bottom: solid #eee;
+  border-bottom-width: thin;
+}
+#play-app{
+  color: rgba(0, 0, 0, 0.87);
+  width: 85%;
+  margin: auto;
+  padding-top: 25px;
+}
+#play-form-wrapper{
+  font-size: 0.9em;
+}
+.form-row{
+  width: calc(100vw - 100px);
+}
+.form-col-left {
+  margin-top: 5px !important;
+  max-width: 100px !important;
+  width: 100px !important;
+}
+@media (min-width: 800px) {
+  .form-col-left {
+    text-align: right;
+    min-height: 40px !important;
+  }
+}
+.form-col-right {
+  max-width: 250px !important;
+  width: 250px !important;
+}
+@media (min-width: 800px) {
+  .form-col-right {
+      text-align: left;
+      justify-content: left;
+      max-width: 400px !important;
+      width: 400px !important;
+  }
+}
+.form-col-right-mobile{
+ margin-left: 7px !important;
+ margin-bottom: 20px;
+}
+@media (min-width: 800px) {
+  .form-col-right-mobile {
+      text-align: left;
+      justify-content: left;
+      margin-left: 120px !important;
+      max-width: 400px !important;
+      width: 400px !important;
+      margin-bottom: 5px;
+  }
+}
+.form-col-right-extra {
+  margin-left: 0px !important;
+  margin-bottom: 20px;
+  max-width: 400px !important;
+  width: 400px !important;
+}
+@media (min-width: 800px) {
+  .form-col-right-extra {
+      text-align: left;
+      justify-content: left;
+      margin-left: 110px !important;
+      padding-bottom: 10px;
+  }
+}
+.section-label{
+  font-size: 0.9em;
+  font-weight: bold;
+  text-align: left;
+  color: black;
+  border-bottom: solid #eee;
+  border-bottom-width: thin;
+  margin-bottom: 5px;
+}
+#player-row{
+  padding: 10px 0;
+  margin: 0 10px;
+  text-align: center;
+}
+#render-summary{
+  padding-left: 10px;
+  font-size: 1.1em;
+  font-style: italic;
+}
+#start-stop{
+  max-width: 105px !important;
+  padding: 3px 0 0 20px;
+  margin-left: 20px;
+  background-color:  #daeaf0;
+  border: solid rgba(0, 0, 0, 0.1);
+}
+#settings-summary{
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+@media (min-width: 800px) {
+  #settings-summary{
+    font-size: 1.0em;
+    margin-left: 10px;
+    margin-bottom: 0px;
+  }
+}
+#math-functions{
+  padding-top: 25px;
+}
+#math-about{
+  font-size: 1em;
+  padding-top: 5px;
+}
+#note-rendering{
+  padding-top: 5px;
+}
+#math-label{
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+#math-description{
+  font-size: 1.1em;
+}
+#math-functions{
+}
+#start-stop{
+  
+}
+.tone-form {
+  width: 60%;
+  margin: auto;
+  padding: 0 25px;
+}
+#octave-field {
+  max-width: 50px;
+}
+#octave-wrapper{
+  text-align: center;
+}
+#tempo-slider{
+  margin-left: 10px;
+  margin-top: -5px;
+}
+#note-wrapper{
+  height: 20px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  background-color:  #daeaf0;
+}
+.current-note {
+  width: 8%;
+  height: 100%;
+  position: relative;
+  float: left;
+  color: white;
+  background-color: #1976d2;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.current-note.active {
+  opacity: 1;
+  transition-duration: 0.1s;
+}
+.footer{
+  padding: 25px 0;
+  font-size: 0.9em;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

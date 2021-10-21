@@ -1,14 +1,13 @@
-
-
-
 import Grid from '@mui/material/Grid'
 import { createTheme, ThemeProvider, styled } from '@mui/material/styles'
-import Box from '@mui/material/Box'
+import Container from '@mui/material/Container'
 import HomeIcon from '@mui/icons-material/Home'
 import GitHubIcon from '@mui/icons-material/GitHub'
 
-import './App.css'
-import PlayForm from './Tones/PlayForm'
+import './css/core.css'
+import './css/App.css'
+
+import PlayForm from './Components/PlayForm'
 
 function App() {
     const theme = createTheme({ palette: { mode: 'light' } })
@@ -16,30 +15,32 @@ function App() {
     return (
         <div className='App'>
             <ThemeProvider theme={theme}>
-                <Grid 
-                    container 
-                    justifyContent="center"
-                    alignItems="center"
-                    rowSpacing={2} 
-                    columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                    <Grid item xs={2}>
-                        <a href='/'><HomeIcon/></a> 
+                <Container className='home'>
+                    <Grid 
+                        id='topnav'
+                        container 
+                        justifyContent="center"
+                        alignItems="center"
+                        rowSpacing={1} >
+                        <Grid item xs={3}>
+                            <a href='/'><HomeIcon/></a> 
+                        </Grid>
+                        <Grid item xs={8}>
+                            <h2>  The Sound of Numbers</h2>
+                        </Grid>
+                        <Grid item xs={1}>
+                            <a href='https://github.com/alienintheheights/soundofnumbers'><GitHubIcon/></a>
+                        </Grid>
                     </Grid>
-                    <Grid item xs={8}>
-                        <h2>  The Sound of Numbers</h2>
-                    </Grid>
-                    <Grid item xs={2}>
-                        <a href='https://github.com/alienintheheights/soundofnumbers'><GitHubIcon/></a>
-                    </Grid>
+                    <div id='play-app'>
+                        <PlayForm/>
+                    </div>
                     <Grid item xs={12}>
-                        <Box sx={{ flexGrow: 1 }}>
-                            <PlayForm/>
-                        </Box>
                         <div className='footer'>
                         copyright andrew lienhard 2021
                         </div>
                     </Grid>
-                </Grid>
+                </Container>
             </ThemeProvider>
         </div>
     )

@@ -1,0 +1,44 @@
+
+:root {
+  box-sizing: border-box;
+  font-size: 0.75em;
+}
+
+@media (min-width: 800px) {
+  :root {
+    font-size: 0.875em;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    font-size: 1em;
+  }
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  body {
+    font-size: 1.2rem;
+    height: 100%;
+    margin: 0;    
+    box-sizing:border-box;
+    border-radius:0px;
+    box-shadow:none;
+    background-repeat:no-repeat;
+    padding-top: 10px; 
+  }
+  #root{
+    height: 100%;   
+  }
+}
+
+
+  

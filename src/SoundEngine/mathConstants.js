@@ -1,32 +1,5 @@
 
-export const TWELVE_NOTE_IONIAN_SCALE = [0, 2, 4, 5, 7, 9, 11, 12, 14, 16, 17, 19]
-export const TWELVE_NOTE_DORIAN_SCALE = [0, 2, 3, 5, 7, 9, 10, 12, 14, 15, 17, 18]
-export const TWELVE_NOTE_PHYRGIAN_SCALE = [0, 1, 3, 5, 7, 8, 10, 12, 13, 15, 17, 19]
-export const TWELVE_NOTE_LYDIAN_SCALE = [0, 2, 4, 6, 7, 9, 11, 12, 14, 16, 18, 19]
-export const TWELVE_NOTE_MIXOLYDIAN_SCALE = [0, 2, 4, 5, 7, 9, 10, 12, 14, 16, 17, 19]
-export const TWELVE_NOTE_AEOLIAN_SCALE = [0, 2, 3, 5, 7, 8, 10, 12, 14, 15, 17, 19]
-export const TWELVE_NOTE_LOCRIAN_SCALE = [0, 1, 3, 5, 6, 8, 10, 12, 13, 15, 17, 19]
-export const TWELVE_NOTE_HARMONIC_MINOR_SCALE = [0, 2, 3, 5, 7, 8, 11, 12, 14, 15, 17, 19]
-export const TWELVE_NOTE_HUNGARIAN_MINOR_SCALE = [0, 2, 3, 6, 7, 8, 11, 12, 14, 15, 18, 19]
-export const TWELVE_NOTE_PHYRGIAN_DOMINANT_SCALE = [0, 1, 4, 5, 7, 8, 10, 12, 13, 16, 17, 19]
 
-export const CHROMATIC_SCALE = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-
-export const NOTE_SCALE = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B']
-
-export const SCALE_MAP = {
-    'ionian'           : TWELVE_NOTE_IONIAN_SCALE,
-    'dorian'           : TWELVE_NOTE_DORIAN_SCALE,
-    'phrygian'         : TWELVE_NOTE_PHYRGIAN_SCALE,
-    'lydian'           : TWELVE_NOTE_LYDIAN_SCALE,
-    'mixolydian'       : TWELVE_NOTE_MIXOLYDIAN_SCALE,
-    'aeolian'          : TWELVE_NOTE_AEOLIAN_SCALE,
-    'locrian'          : TWELVE_NOTE_LOCRIAN_SCALE,
-    'harmonic'         : TWELVE_NOTE_HARMONIC_MINOR_SCALE,
-    'hungarian'        : TWELVE_NOTE_HUNGARIAN_MINOR_SCALE,
-    'phrygiandominant' : TWELVE_NOTE_PHYRGIAN_DOMINANT_SCALE,
-    'chromatic'        : CHROMATIC_SCALE
-}
 
 export const PI = '3.14159265358979323846264338327950288419716939937510582097494459230781640628620899862803482534211706798214808651328230664709384460955058223172535940812848111745028410270193852110555964462294895493038196442881097566593344612847564823378678316527120190914564856692346034861045432664821339360726024914127372458700660631558817488152092096282925409171536436789259036001133053054882046652138'
 export const PI12 = '3.184809493b918664573a6211bb151551a05729290a7809a492742140a60a55256a0661a03753a3aa54805646880181a3683083272bbba0a370b12265529a828903b4b256b8403759a71626b8a54687621849b849a8225616b442796a31737b229b2391489853943b8763725616447236b027a421aa17a38b52a18a838b01514a51144a23315a3009a8906b61b8b48a62253a88a50a43ba0944572315933664476b3aabb77583975120683526b75b462060bb03b432551913772729a214755'
@@ -44,121 +17,92 @@ export const APERY = '1.20205690315959428539973816151144999076498629234049888179
 export const APERY12 = '1.2511a281aaaa58975769233647a11735055b959b0394642233179a18943a300b8b4234273a387855118b00123031a3a73468898183b38b26b6284a02166a9a542a001806599b8040724a261274a590a22a9386515822093249884327b7371720601b6759098972450953314a0775196b18510765310941374439b587142539a665812477b22592040560706b6b511354b473b3157aa0489b0084a037054335b95b995ab78755444492104523966a3b744bb20a2a94284b1784aa8a137923200bb'
 export const LN2 = '0.69314718055994530941723212145817656807550013436025525412068000949339362196969471560586332699641868754200148102057068573368552023575813055703267075163507596193072757082837143519030703862389167347112335011536449795523912047517268157493206515552473413952588295045300709532636664265410423915781495204374043038550080194417064167151864471283996817178454695702627163106454615025720740248163777338'
 export const LN2_12 ='0.839912483369ab213742a34679253788658a1402a54053184931ab084a362519897435335b34567a7b884ba5bb14874530382923719267105164b92292507124b8594ba3a505980a7284728001260924784232a385a23434340a798a22656144527b593009b195b168240b40a1606053444b768b9a3749a4a0b730350969a0a2906a8584168b00626bb905ab06a6a554b6ba545184987b0a2824ba96243320898637b1280bba345bb7919356a3322a29074b601a79a2861b0463682723747a821727'
+export const FIBO = '011235813213455891442333776109871597258441816765109461771128657463687502512139319641831781151422983204013462692178309352457857028879227465149303522415781739088169'
 
 export const PI_NAME = 'pi'
-export const PI12_NAME = 'pi12'
 export const E_NAME = 'e'
-export const E12_NAME = 'e12'
 export const PHI_NAME = 'phi'
-export const PHI12_NAME = 'phi12'
 export const GAMMA_NAME = 'gamma'
-export const GAMMA12_NAME = 'gamma12'
 export const ROOT2_NAME = 'root2'
-export const ROOT2_12_NAME = 'root2_12'
 export const ROOT5_NAME = 'root5'
-export const ROOT5_12_NAME = 'root5_12'
 export const APERY_NAME='apery'
-export const APERY12_NAME='apery12'
 export const LN2_NAME='ln2'
-export const LN2_12_NAME='ln2_12'
+export const FIBO_NAME='fibo'
 
 export const MATH_MAP = {
     [PI_NAME] : {
+        'name'        : 'Pi',
         'value'       : PI,
+        'value12'     : PI12,
+        'base'        : 10,
         'label'       : '\u03C0',
         'description' : 'Pi, the ratio of a circle\'s circumference to its diameter',
         'link'        : 'https://en.wikipedia.org/wiki/Pi'
     },
-    [PI12_NAME] : {
-        'value'       : PI12,
-        'label'       : '\u03C0',
-        'description' : 'Pi in base 12',
-        'link'        : 'https://robertlovespi.net/2014/06/09/the-beginning-of-the-number-pi-in-binary-through-hexadecimal-etc/'
-    },
     [E_NAME] : {
+        'name'        : 'Euler\'s Number',
         'value'       : E,
+        'value12'     : E12,
         'label'       : 'e',
         'description' : 'Euler\'s Number',
         'link'        : 'https://en.wikipedia.org/wiki/E_(mathematical_constant)'
-    },  
-    [E12_NAME] : {
-        'value'       : E12,
-        'label'       : 'e',
-        'description' : 'Euler\'s Number in base 12',
-        'link'        : 'https://en.wikipedia.org/wiki/E_(mathematical_constant)'
-    },
+    }, 
     [PHI_NAME] : {
+        'name'        : 'The Golden Ratio',
         'value'       : PHI,
+        'value12'     : PHI12,
         'label'       : '\u03C8',
-        'description' : 'The Golden Ratio',
-        'link'        : 'https://en.wikipedia.org/wiki/Golden_ratio'
-    },
-    [PHI12_NAME] : {
-        'value'       : PHI12,
-        'label'       : '\u03C8',
-        'description' : 'The Golden Ratio in base 12',
+        'description' : 'Golden Ratio',
         'link'        : 'https://en.wikipedia.org/wiki/Golden_ratio'
     },
     [GAMMA_NAME] : {
+        'name'        : 'Euler-Mascheroni constant',
         'value'       : GAMMA,
+        'value12'     : GAMMA12,
         'label'       : '\u03B3',
-        'description' : 'The Euler-Mascheroni constant',
-        'link'        : 'http://numbers.computation.free.fr/Constants/Gamma/gamma.pdf'
-    },
-    [GAMMA12_NAME] : {
-        'value'       : GAMMA12,
-        'label'       : '\u03B3',
-        'description' : 'The Euler-Mascheroni constant in base 12',
+        'description' : 'Euler-Mascheroni constant',
         'link'        : 'http://numbers.computation.free.fr/Constants/Gamma/gamma.pdf'
     },
     [ROOT2_NAME] : {
+        'name'        : 'Square root of 2',
         'value'       : ROOT2,
+        'value12'     : ROOT2_12,
         'label'       : '\u221A2',
-        'description' : 'The Square Root of Two',
+        'description' : 'Square Root of Two',
         'link'        : 'https://en.wikipedia.org/wiki/Square_root_of_2'
     }, 
-    [ROOT2_12_NAME] : {
-        'value'       : ROOT2_12,
-        'label'       : '\u221A2',
-        'description' : 'The Square Root of Two in base 12',
-        'link'        : 'https://en.wikipedia.org/wiki/Square_root_of_2'
-    },
     [ROOT5_NAME] : {
+        'name'        : 'Square root of 5',
         'value'       : ROOT5,
+        'value12'     : ROOT5_12,
         'label'       : '\u221A5',
-        'description' : 'The Square Root of Five',
-        'link'        : 'https://en.wikipedia.org/wiki/Square_root_of_5'
-    },
-    [ROOT5_12_NAME] : {
-        'value'       : ROOT5_12,
-        'label'       : '\u221A5',
-        'description' : 'The Square Root of Five in base 12',
+        'description' : 'Square Root of Five',
         'link'        : 'https://en.wikipedia.org/wiki/Square_root_of_5'
     },
     [APERY_NAME] : {
+        'name'        : 'Apéry\'s constant',
         'value'       : APERY,
+        'value12'     : APERY12,
         'label'       : '\u03B6(3)',
-        'description' : 'Apéry\'s constant',
+        'description' : 'Apéry\'s constant, a zeta function',
         'link'        : 'https://gonitsora.com/aperys-constant/'
     },
-    [APERY12_NAME] : {
-        'value'       : APERY12,
-        'label'       : '\u03B6(3)',
-        'description' : 'Apéry\'s constant in base 12',
-        'link'        : 'https://gonitsora.com/aperys-constant/'
-    }, 
     [LN2_NAME] : {
+        'name'        : 'Natural log of two',
         'value'       : LN2,
+        'value12'     : LN2_12,
         'label'       : 'ln(2)',
         'description' : 'Natural logarithm of two',
         'link'        : 'https://en.wikipedia.org/wiki/Natural_logarithm_of_2'
     },
-    [LN2_12_NAME] : {
-        'value'       : LN2_12,
-        'label'       : 'ln(2)',
-        'description' : 'Natural logarithm of two in base 2',
-        'link'        : 'https://en.wikipedia.org/wiki/Natural_logarithm_of_2'
-    }
-
+    [FIBO_NAME] : {
+        'name'        : 'Fibonacci Sequence',
+        'value'       : FIBO,
+        'value12'     : FIBO,
+        'base'        : 10,
+        'label'       : 'Fn',
+        'description' : 'Fibonacci Sequence digits',
+        'link'        : 'https://en.wikipedia.org/wiki/Fibonacci_number'
+    },
     
 }
