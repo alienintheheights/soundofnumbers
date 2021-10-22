@@ -5,7 +5,7 @@ import NativeSelect from '@mui/material/NativeSelect'
 import Radio from '@mui/material/Radio'
 import FormControlLabel from '@mui/material/FormControlLabel'
 
-import * as c from '../SoundEngine/mathConstants'
+import * as c from './mathConstants'
 
 function MathSelector(props) {
 
@@ -15,7 +15,7 @@ function MathSelector(props) {
         const nameList = Object.keys(c.MATH_MAP)
         return  (
             <Row className='form-row'>
-                <Col className='form-col-left' sm={2}>
+                <Col className='subsection-label form-col-left' sm={2}>
                     <Label component="legend">number</Label>
                 </Col>
                 <Col className='form-col-right' sm={10}>
@@ -42,7 +42,7 @@ function MathSelector(props) {
     const renderBaseSelect = () => {
         return  (
             <Row className='form-row'>
-                <Col className='form-col-left' sm={2}>
+                <Col className='subsection-label form-col-left' sm={2}>
                     <Label component="legend">base</Label>
                 </Col>
                 <Col className='form-col-right' sm={10}>
@@ -61,7 +61,7 @@ function MathSelector(props) {
         const subsetofDigits = notes.substring(0,30)
         return (
             <Row>
-                <Col className='form-col-left' sm={2}>
+                <Col className='subsection-label form-col-left' sm={2}>
                     about
                 </Col>
                 <Col id='math-about' className='form-col-right' sm={10}>

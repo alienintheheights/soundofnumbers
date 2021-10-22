@@ -1,3 +1,25 @@
+const musicColorMap = [
+    '#a2def2',
+    '#79a6b5',
+    '#7fd3f0',
+    '#4d97b0',
+    '#33c1f2',
+    '#0f3542',
+    '#034787',
+    '#057beb',
+    '#409094',
+    '#0cbec7',
+    '#323f40',
+    '#0a4e52',
+    '#0a6953'
+]
+//background-color:#adc4cc;
+//  background-color: #1976d2;
+// #daeaf0
+//var color = Math.floor(Math.random()*16777215).toString(16) // = "#A197B9"
+// noteElement.style.backgroundColor=color //colorList[index%12]
+
+
 
 export const TWELVE_NOTE_IONIAN_SCALE = [0, 2, 4, 5, 7, 9, 11, 12, 14, 16, 17, 19]
 export const TWELVE_NOTE_DORIAN_SCALE = [0, 2, 3, 5, 7, 9, 10, 12, 14, 15, 17, 18]
@@ -26,7 +48,7 @@ export const HUN_NAME = 'hungarian'
 export const PDO_NAME = 'phrygiandominant'
 export const CHR_NAME = 'chromatic'
 
-export const CUSTOM_LABEL = 'your custom scale'
+export const CUSTOM_LABEL = 'custom entry'
 
 export const SCALE_MAP = {
     [ION_NAME] : {

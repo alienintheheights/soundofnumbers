@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react'
 
-import MathSelector from './MathSelector'
-import MusicSelector from './MusicSelector'
+import MathSelector from '../Math/MathSelector'
+import MusicSelector from '../Music/MusicSelector'
 import PlaybackControl from './PlaybackControl'
 import CustomEntry from './CustomEntry'
 import StartStop from './StartStop'
 
 import { generateNotes } from '../SoundEngine/generator'
-import * as c from '../SoundEngine/mathConstants'
-import * as m from '../SoundEngine/musicConstants'
+import * as c from '../Math/mathConstants'
+import * as m from '../Music/musicConstants'
 
 const base12pattern = /[^0-9AB]/gi
 
@@ -131,19 +131,11 @@ function PlayForm() {
 
     const scaleName = m.SCALE_MAP[scale].name
     const baseInfo = (base === 12) ? 'base 12' : ''
-    const constantLabel = (constantName !== m.CUSTOM_LABEL) ? `, ${getConstantLabel()} ,` : ''
-    const summary =  `the ${getConstantName()} ${constantLabel} ${baseInfo} in ${scaleName} `
+    const constantLabel = (constantName !== m.CUSTOM_LABEL) ? `(${getConstantLabel()})` : ''
+    const summary =  `${scaleName} ${getConstantName()} ${constantLabel} ${baseInfo} `
 
     return (
         <div id='play-form-wrapper'>
-            <StartStop
-                loop={loop}
-                selectLoop={selectLoop}
-                reset={reset}
-                setReset={setReset}
-                play={play}
-                setPlay={setPlay}
-                summary={summary} />
             <PlaybackControl 
                 loop={loop}
                 selectLoop={selectLoop}
@@ -154,7 +146,16 @@ function PlayForm() {
                 tempo={tempo}
                 selectTempo={selectTempo}
                 noteVals={noteVals}
+                summary={summary}
             />
+            <StartStop
+                loop={loop}
+                selectLoop={selectLoop}
+                reset={reset}
+                setReset={setReset}
+                play={play}
+                setPlay={setPlay}
+                summary={summary} />
             <MathSelector 
                 base={base}
                 selectBase={selectBase} 
@@ -172,6 +173,7 @@ function PlayForm() {
             <CustomEntry
                 notes={notes}
                 selectNoteValues={selectNoteValues}
+                noteVals={noteVals} 
             />
         </div>
     )

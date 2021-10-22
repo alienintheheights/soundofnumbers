@@ -5,50 +5,42 @@ import LoopIcon from '@mui/icons-material/Loop'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow'
 import StopIcon from '@mui/icons-material/Stop'
 
-
 function StartStop(props)  {
 
-    const {summary, loop, selectLoop, reset, setReset, play, setPlay} = props
+    const {loop, selectLoop, reset, setReset, play, setPlay} = props
 
-    const playText = play ? 'Playing' : 'Hear'
     return (
         <React.Fragment>
-            <Row id='playback'>
-                <Col className='section-label' sm={12}>
-                player
-                </Col>
-            </Row>
-            <Row>
-                <Col id='settings-summary' className='form-col-right-extra' sm={12}>
-                    <span id=''>{playText} {summary}</span>
-                </Col>
-            </Row>
-            <Row>
-                <Col id='start-stop' className='form-col-right-mobile' sm={12} md={12}>
-                    {play &&  <StopIcon 
+            <Row id='start-stop'>
+                <Col  xs={1} sm={2} md={2} lg={2}>&nbsp;</Col>
+                <Col className='triple-col' xs={3} sm={3} md={3} lg={3}>
+                    <StopIcon 
                         id="stop-button" 
-                        color='primary'
+                        color={play ? 'primary' : 'disabled'}
                         fontSize="large" 
                         onClick={() => {
                             setReset(false)
                             setPlay(false)
-                        }}/>}
-                    {!play && <PlayArrowIcon 
+                        }}/>
+                </Col>   
+                <Col className='triple-col' xs={3} sm={3} md={2} lg={2}>
+                    <PlayArrowIcon 
                         id="play-button" 
-                        color='primary'
+                        color={!play ? 'primary' : 'disabled'}
                         fontSize="large" 
                         onClick={() => {
                             setReset(!reset)
                             setPlay(true)
-                        }}/>}
+                        }}/>
+                </Col>   
+                <Col className='triple-col' xs={3} sm={3} md={3} lg={2}>
                     <LoopIcon 
                         fontSize="large" 
                         onClick={selectLoop} 
                         color={loop ? 'primary' : 'disabled'} />
-                  
                 </Col>
+                <Col xs={2} sm={1} md={1} lg={4}></Col>
             </Row> 
-          
         </React.Fragment>)
 }
 

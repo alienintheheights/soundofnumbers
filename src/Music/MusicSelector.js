@@ -2,7 +2,7 @@ import React from 'react'
 import { Label, Row, Col } from 'reactstrap'
 import NativeSelect from '@mui/material/NativeSelect'
 
-import * as m from '../SoundEngine/musicConstants'
+import * as m from './musicConstants'
 function MusicSelector(props) {
 
     const {scale, selectScale, keyIndex, selectKey, octave, selectOctave} = props
@@ -11,7 +11,7 @@ function MusicSelector(props) {
         const entry = m.SCALE_MAP[scale]
         return (
             <Row>
-                <Col className='form-col-left' sm={2}>
+                <Col className='subsection-label form-col-left' sm={2}>
                     about
                 </Col>
                 <Col id='math-about' className='form-col-right' sm={10}>
@@ -32,11 +32,11 @@ function MusicSelector(props) {
     const nameList = Object.keys(m.SCALE_MAP)
     return (
         <Row>
-            <Col className='section-label' sm={12}>
+            <Col className='section-label form-col-left' sm={12}>
                 musical
             </Col>
             <Row className='form-row'>
-                <Col className='form-col-left' sm={2}>
+                <Col className='subsection-label form-col-left' sm={2}>
                     <Label component="legend">mode</Label>
                 </Col>
                 <Col className='form-col-right' sm={10}>
@@ -60,7 +60,7 @@ function MusicSelector(props) {
                 </Col> 
             </Row>
             <Row className='form-row'>
-                <Col className='form-col-left' sm={2}>
+                <Col className='subsection-label form-col-left' sm={2}>
                     <Label component="legend">key</Label>
                 </Col> 
                 <Col className='form-col-right' sm={10}>
@@ -94,7 +94,7 @@ function MusicSelector(props) {
                 </Col>
             </Row>
             <Row className='form-row'>
-                <Col className='form-col-left' sm={2}>
+                <Col className='subsection-label form-col-left' sm={2}>
                     <Label component="legend">octave</Label>
                 </Col> 
                 <Col className='form-col-right' sm={10}>

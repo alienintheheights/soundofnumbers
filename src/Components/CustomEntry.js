@@ -6,11 +6,11 @@ import TextField from '@mui/material/TextField'
 
 function CustomEntry(props) {
 
-    const { notes, selectNoteValues} = props
+    const { notes, selectNoteValues, noteVals} = props
 
     return (
         <Row id='data-card'>
-            <Row id='playback'>
+            <Row >
                 <Col className='section-label' sm={12}>
                 custom
                 </Col>
@@ -29,6 +29,30 @@ function CustomEntry(props) {
                             maxRows={10}
                             value={notes}
                             onChange={selectNoteValues}
+                            label={'Enter a custom numerical sequence'} 
+                        />
+                    </Box>
+                </Col>
+            </Row>
+            <Row>
+                <Col className='section-label' sm={12}>
+                note rendering
+                </Col>
+                <Col>
+                    <Box
+                        component="form"
+                        sx={{
+                            '& .MuiTextField-root' : { m: 1, pt: 2, width: '80%' },
+                        }}
+                        noValidate
+                        autoComplete="off"
+                        variant="filled"
+                    >
+                        <TextField
+                            disabled={true}
+                            multiline 
+                            maxRows={10}
+                            value={noteVals}
                             label={'Enter a custom numerical sequence'} 
                         />
                     </Box>
