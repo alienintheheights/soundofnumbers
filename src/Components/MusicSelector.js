@@ -47,6 +47,12 @@ function MusicSelector(props) {
                         label="Mode"
                         autoWidth
                         onChange={selectScale}
+                        sx={{
+                            paddingLeft  : '10px',
+                            boxShadow    : 0.5,
+                            borderRadius : 0.5,
+                            p            : 1
+                        }}
                     >
                         {nameList.map((item, index) => ( <option key={`constant-selection-${index}`} value={item}>{m.SCALE_MAP[item].name}</option>))}
            
@@ -65,6 +71,12 @@ function MusicSelector(props) {
                         label="Key"
                         autoWidth
                         onChange={selectKey}
+                        sx={{
+                            paddingLeft  : '10px',
+                            boxShadow    : 0.5,
+                            borderRadius : 0.5,
+                            p            : 1
+                        }}
                     >
                         <option value={0}>C</option>
                         <option value={1}>C#</option>
@@ -93,6 +105,12 @@ function MusicSelector(props) {
                         label="Octave"
                         autoWidth
                         onChange={selectOctave}
+                        sx={{
+                            paddingLeft  : '10px',
+                            boxShadow    : 0.5,
+                            borderRadius : 0.5,
+                            p            : 1
+                        }}
                     >
                         <option value={2}>2</option>
                         <option value={3}>3</option>

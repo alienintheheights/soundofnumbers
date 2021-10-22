@@ -26,6 +26,12 @@ function MathSelector(props) {
                         autoWidth
                         onChange={selectNumConstant}
                         variant="filled"
+                        sx={{
+                            paddingLeft  : '10px',
+                            boxShadow    : 0.5,
+                            borderRadius : 0.5,
+                            p            : 1
+                        }}
                     >
                         {nameList.map((item, index) => ( <option key={`constant-selection-${index}`} value={item}>{c.MATH_MAP[item].name}</option>))}
                     </NativeSelect>

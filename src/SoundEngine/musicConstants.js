@@ -20,13 +20,13 @@ export const PHR_NAME = 'phrygian'
 export const LYD_NAME = 'lydian'
 export const MIX_NAME = 'mixolydian'
 export const AEO_NAME = 'aeolian'
-export const LOC_NAME='locrian'
-export const HAR_NAME='harmonic'
-export const HUN_NAME='hungarian'
-export const PDO_NAME='phrygiandominant'
-export const CHR_NAME='chromatic'
+export const LOC_NAME = 'locrian'
+export const HAR_NAME = 'harmonic'
+export const HUN_NAME = 'hungarian'
+export const PDO_NAME = 'phrygiandominant'
+export const CHR_NAME = 'chromatic'
 
-export const CUSTOM_LABEL='Custom Scale'
+export const CUSTOM_LABEL = 'your custom scale'
 
 export const SCALE_MAP = {
     [ION_NAME] : {

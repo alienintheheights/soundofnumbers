@@ -48,11 +48,11 @@ export const MATH_MAP = {
         'link'        : 'https://en.wikipedia.org/wiki/E_(mathematical_constant)'
     }, 
     [PHI_NAME] : {
-        'name'        : 'The Golden Ratio',
+        'name'        : 'Golden Ratio',
         'value'       : PHI,
         'value12'     : PHI12,
         'label'       : '\u03C8',
-        'description' : 'Golden Ratio',
+        'description' : 'the Golden Ratio',
         'link'        : 'https://en.wikipedia.org/wiki/Golden_ratio'
     },
     [GAMMA_NAME] : {
@@ -60,23 +60,23 @@ export const MATH_MAP = {
         'value'       : GAMMA,
         'value12'     : GAMMA12,
         'label'       : '\u03B3',
-        'description' : 'Euler-Mascheroni constant',
+        'description' : 'The Euler-Mascheroni constant',
         'link'        : 'http://numbers.computation.free.fr/Constants/Gamma/gamma.pdf'
     },
     [ROOT2_NAME] : {
-        'name'        : 'Square root of 2',
+        'name'        : 'square root of 2',
         'value'       : ROOT2,
         'value12'     : ROOT2_12,
         'label'       : '\u221A2',
-        'description' : 'Square Root of Two',
+        'description' : 'The square root of 2',
         'link'        : 'https://en.wikipedia.org/wiki/Square_root_of_2'
     }, 
     [ROOT5_NAME] : {
-        'name'        : 'Square root of 5',
+        'name'        : 'square root of 5',
         'value'       : ROOT5,
         'value12'     : ROOT5_12,
         'label'       : '\u221A5',
-        'description' : 'Square Root of Five',
+        'description' : 'The square root of 5',
         'link'        : 'https://en.wikipedia.org/wiki/Square_root_of_5'
     },
     [APERY_NAME] : {
@@ -88,11 +88,11 @@ export const MATH_MAP = {
         'link'        : 'https://gonitsora.com/aperys-constant/'
     },
     [LN2_NAME] : {
-        'name'        : 'Natural log of two',
+        'name'        : 'natural log of two',
         'value'       : LN2,
         'value12'     : LN2_12,
         'label'       : 'ln(2)',
-        'description' : 'Natural logarithm of two',
+        'description' : 'The natural logarithm of 2',
         'link'        : 'https://en.wikipedia.org/wiki/Natural_logarithm_of_2'
     },
     [FIBO_NAME] : {
@@ -101,7 +101,7 @@ export const MATH_MAP = {
         'value12'     : FIBO,
         'base'        : 10,
         'label'       : 'Fn',
-        'description' : 'Fibonacci Sequence digits',
+        'description' : 'The digits of the Fibonacci sequence',
         'link'        : 'https://en.wikipedia.org/wiki/Fibonacci_number'
     },
     

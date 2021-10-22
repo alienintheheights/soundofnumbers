@@ -131,7 +131,8 @@ function PlayForm() {
 
     const scaleName = m.SCALE_MAP[scale].name
     const baseInfo = (base === 12) ? 'base 12' : ''
-    const summary =  `${getConstantName()}, ${getConstantLabel()}, ${baseInfo} in ${scaleName} mode `
+    const constantLabel = (constantName !== m.CUSTOM_LABEL) ? `, ${getConstantLabel()} ,` : ''
+    const summary =  `the ${getConstantName()} ${constantLabel} ${baseInfo} in ${scaleName} `
 
     return (
         <div id='play-form-wrapper'>
