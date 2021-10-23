@@ -29,6 +29,6 @@ Pi, e, The Euler-Mascheroni constant (a.k.a., gamma), The Golden Ratio (a.k.a., 
 
 ## test
 
-`yarn test` gives this error: ReferenceError: AudioBuffer is not defined
+`yarn test` 
 
-Fixing requires so some sort of mock. Haven't looked into it yet. ToneJs has a solution.
+Rendering with anything related to ToneJs throws: ReferenceError: AudioBuffer is not defined. Fixing requires some sort of mock. Haven't looked into it yet. ToneJs has a solution.

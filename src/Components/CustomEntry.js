@@ -53,7 +53,6 @@ function CustomEntry(props) {
                             multiline 
                             maxRows={10}
                             value={noteVals}
-                            label={'Enter a custom numerical sequence'} 
                         />
                     </Box>
                 </Col>

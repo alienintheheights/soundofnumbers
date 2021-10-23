@@ -112,13 +112,10 @@ function MusicSelector(props) {
                             p            : 1
                         }}
                     >
-                        <option value={2}>2</option>
-                        <option value={3}>3</option>
-                        <option value={4}>4</option>
-                        <option value={5}>5</option>
-                        <option value={6}>6</option>
-                        <option value={7}>7</option>
-                        <option value={8}>8</option>
+                        <option value={3}>-1 Octave</option>
+                        <option value={4}>0</option>
+                        <option value={5}>+1 Octave</option>
+                        <option value={6}>+2 Octaves</option>
                     </NativeSelect>
                 </Col>
             </Row>

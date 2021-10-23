@@ -16,7 +16,7 @@ function StartStop(props)  {
                 <Col className='triple-col' xs={3} sm={3} md={3} lg={3}>
                     <StopIcon 
                         id="stop-button" 
-                        color={play ? 'primary' : 'disabled'}
+                        color={play ? 'primary' : 'action'}
                         fontSize="large" 
                         onClick={() => {
                             setReset(false)
@@ -26,7 +26,7 @@ function StartStop(props)  {
                 <Col className='triple-col' xs={3} sm={3} md={2} lg={2}>
                     <PlayArrowIcon 
                         id="play-button" 
-                        color={!play ? 'primary' : 'disabled'}
+                        color={!play ? 'primary' : 'action'}
                         fontSize="large" 
                         onClick={() => {
                             setReset(!reset)

@@ -31,7 +31,7 @@ function PlaybackControl(props) {
 
     const {loop, reset, setReset, play, setPlay, tempo, selectTempo, noteVals, summary} = props
 
-    const playText = play ? 'Playing' : 'Listen to'
+    const playText = 'The sound of a '
     return (
         <React.Fragment>
             <Row id='playback'>
